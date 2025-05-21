@@ -9,7 +9,7 @@
 
 Si hacés `docker-compose up` o `docker compose up` (dependiendo de la versión de Docker que tengas) se va a levantar un mock server en el puerto 8080 que tiene una API que responde las transacciones.
 
-Si hacés `GET localhost:8080/transactions` debería responderte algo así:
+Si hacés `GET localhost:8080/transactions` o `GET 0.0.0.0:8080/transactions` debería responderte algo así.
 
 ```
     {
@@ -32,3 +32,5 @@ Si hacés `GET localhost:8080/transactions` debería responderte algo así:
       }
     }
 ```
+
+⚠️ Depende del OS, si `GET 0.0.0.0:8080/transactions` te responde o no, es más fiable usar `GET localhost:8080/transactions`
